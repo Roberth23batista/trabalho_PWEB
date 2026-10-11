@@ -6,8 +6,8 @@ const app = express();
 app.use(express.json());
 
 app.use('./usuarios', require('./rotas/usuarios'));
-app.use('./ordens', require('./rotas/ordens'));
-app.use('./enderecos', require('./rotas/enderecos'));
+app.use('./ordens', require('./rotas/despesas'));
+app.use('./enderecos', require('./rotas/agendamentos'));
 
 
 sequelize.sync().then(() => { app.listen(3000, () => console.log|('Servidor aberto em https://localhost:3000'))});
