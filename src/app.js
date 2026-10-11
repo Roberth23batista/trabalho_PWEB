@@ -6,8 +6,8 @@ const app = express();
 app.use(express.json());
 
 app.use('./usuarios', require('./rotas/usuarios'));
-app.use('./ordens', require('./rotas/despesas'));
-app.use('./enderecos', require('./rotas/agendamentos'));
+app.use('./despesas', require('./rotas/despesas'));
+app.use('./agendamentos', require('./rotas/agendamentos'));
 
 
 sequelize.sync()
