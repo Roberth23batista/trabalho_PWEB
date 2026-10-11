@@ -9,7 +9,7 @@ module.exports = sequelize.define('Despesas', {
     },
 
     valor: {
-        type: DataTypes.int,
+        type: DataTypes.FLOAT,
         allowNull: false
     }
 })
