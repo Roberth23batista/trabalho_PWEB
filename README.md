@@ -131,4 +131,81 @@ Resposta `201 Created`:
 
 ### Criar despesa
 
-`POST
+`POST /agendamentos`
+
+```json
+{
+  "nome": "Retorno de rotina",
+  "nomeMedico": "Dr. João Souza",
+  "idUsuario": 1
+}
+```
+
+### Listar usuários
+
+`GET /usuarios`
+
+```json
+[
+  {
+    "id": 1,
+    "nome": "Maria Silva",
+    "email": "maria@email.com",
+    "createdAt": "2025-01-01T12:00:00.000Z",
+    "updatedAt": "2025-01-01T12:00:00.000Z"
+  }
+]
+```
+
+Se ainda não houver registros, a resposta é uma lista vazia: `[]`.
+
+### Atualizar
+
+`PUT /usuarios/1`
+
+```json
+{
+  "nome": "Maria Souza"
+}
+```
+
+Resposta `200 OK`:
+
+```json
+{
+  "mensagem": "Usuário foi atualizado com sucesso!"
+}
+```
+
+### Apagar
+
+`DELETE /usuarios/1`
+
+Resposta `200 OK`:
+
+```json
+{
+  "mensagem": "Usuário apagado com sucesso"
+}
+```
+
+## Códigos de resposta
+
+| Código | Significado                                                                     |
+|--------|---------------------------------------------------------------------------------|
+| 200    | Requisição bem-sucedida (listar, atualizar, apagar)                             |
+| 201    | Registro criado com sucesso                                                     |
+| 404    | Registro não encontrado (atualizar/apagar com `id` inexistente)                 |
+| 500    | Erro interno ou de validação (ex.: campo obrigatório ausente, e-mail duplicado) |
+
+## Como testar
+
+O navegador só faz requisições `GET`. Para testar `POST`, `PUT` e `DELETE`, use uma ferramenta como **Postman**, **Insomnia** ou a extensão **Thunder Client** do VS Code.
+
+Exemplo com `curl`:
+
+```bash
+curl -X POST http://localhost:3000/usuarios \
+  -H "Content-Type: application/json" \
+  -d '{"nome": "Maria Silva", "email": "maria@email.com"}'
+```
