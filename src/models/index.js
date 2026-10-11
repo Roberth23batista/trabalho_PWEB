@@ -1,31 +1,33 @@
 const Usuario = require('./Usuario');
-const Usuario = require('./Despesa');
-const Usuario = require('./Agendamento');
+const Despesa = require('./Despesa');
+const Agendamento = require('./Agendamento');
 
 Usuario.hasMany(
-    Consulta, {
-        foreignkey: 'idUsuario',
-        as: 'consultas',
-        onDelete: 'CASCATE'
-    }
-);
+    Despesa, {
+        foreignKey: 'idUsuario', 
+        as: 'despesas', 
+        onDelete: 'CASCADE' 
+    });
+
 Despesa.belongsTo(
-    Usuario, {
-        foreignkey: 'idUsuario',
-        as: 'usuarios'
+    Usuario, { 
+        foreignKey: 'idUsuario',
+        as: 'usuario' 
     }
 );
-Agendamento.belongsto(
-    Usuario, {
-        foreignkey: 'idUsuario',
-        as: 'usuarios'
-    }
-);
+
 Usuario.hasMany(
-    Agendamento, {
-        foreignkey: 'idUsuario',
-        as: 'agendamentos',
-        onDelete: 'CASCATE'
+    Agendamento, { 
+        foreignKey: 'idUsuario', 
+        as: 'agendamentos', 
+        onDelete: 'CASCADE' 
+    }
+);
+
+Agendamento.belongsTo(
+    Usuario, { 
+        foreignKey: 'idUsuario', 
+        as: 'usuario' 
     }
 );
 
