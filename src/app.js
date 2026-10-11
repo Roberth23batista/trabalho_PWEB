@@ -11,5 +11,5 @@ app.use('./agendamentos', require('./rotas/agendamentos'));
 
 
 sequelize.sync()
-.then(() => { app.listen(3000, () => console.log('Servidor aberto em https://localhost:3000'))}) 
+.then(() => { app.listen(3000, () => console.log('Servidor aberto em http://localhost:3000'))}) 
 .catch(err => console.error('Erro ao iniciar:', err));
