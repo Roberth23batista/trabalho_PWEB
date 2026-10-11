@@ -17,7 +17,7 @@ const atualizar = (Model, nome) => async (req, res) => {
 module.exports = {
     atualizarUsuario: atualizar(Usuario, 'Usuário'),
     atualizarAgendamento: atualizar(Agendamento, 'Agendamento'),
-    atualizarDespesa: atualizar(Despesas, 'Despesa'),
+    atualizarDespesa: atualizar(Despesa, 'Despesa'),
 };
 
 //por: Roberth batista da Silva
