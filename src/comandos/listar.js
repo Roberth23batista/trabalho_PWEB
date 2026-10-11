@@ -1,8 +1,8 @@
 const { Usuario, Despesa, Consulta } = require('../models');
 
-const listar = (Models, nome, includes = []) => async (req, res) =>{
+const listar = (Models, nome, include = []) => async (req, res) =>{
     try{
-        const item = await Models.findAll({ includes });
+        const item = await Models.findAll({ include });
 
         return res.status(200).json(item)
     } catch (error) {
