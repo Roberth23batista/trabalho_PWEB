@@ -4,7 +4,7 @@ const apagar = require("../controles/apagar");
 const atualizar = require("../controles/atualizar");
 const listar = require("../controles/listar");
 
-router.get('/', listar.listaAgendamento);
+router.get('/', listar.listarAgendamento);
 router.post('/', criar.criarAgendamento);
 router.put('/:id', atualizar.atualizarAgendamento);
 router.delete('/:id', apagar.apagarAgendamento);
