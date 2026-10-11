@@ -1,4 +1,4 @@
-const { Usuario, Agendamento, Consulta } = require('../models');
+const { Usuario, Agendamento, Despesa } = require('../models');
 
 const atualizar = (Model, nome) => async (req, res) => {
     try {
