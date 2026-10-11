@@ -1,4 +1,3 @@
-//por: marcello Otávio Soares dos Santos
 const { Usuario, Despesa, Agendamento } = require('../models');
 
 const apagar = (Model, nome) => async (req, res) => {
@@ -15,3 +14,5 @@ const apagar = (Model, nome) => async (req, res) => {
 exports.apagarUsuario = apagar(Usuario, 'Usuário');
 exports.apagarDespesa = apagar(Despesa, 'Despesa');
 exports.apagarAgendamento = apagar(Agendamento, 'Agendamento');
+
+//por: marcello Otávio Soares dos Santos

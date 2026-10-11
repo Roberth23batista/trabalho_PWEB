@@ -12,3 +12,5 @@ const criar = (Model, nome) => async (req, res) => {
 exports.criarUsuario = criar(Usuario, 'Usuário');
 exports.criarDespesa = criar(Despesa, 'Despesa');
 exports.criarAgendamento = criar(Agendamento, 'Agendamento');
+
+//por: marcello Otávio Soares dos Santos
