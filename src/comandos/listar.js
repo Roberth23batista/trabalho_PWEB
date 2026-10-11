@@ -13,7 +13,7 @@ const listar = (Models, nome, include = []) => async (req, res) =>{
 module.exports = {
     listarUsuario: listar(Usuario, 'usuários'),
     listarDespesa: listar(Despesa, 'despesas', [{ model: Usuario, as: 'usuario' }]),
-    listarAgendamento: listar(Consulta, 'consultas', [{ model: Usuario, as: 'usuario' }]),
+    listarAgendamento: listar(Agendamento, 'agendamentoss', [{ model: Usuario, as: 'usuario' }]),
 };
 //por: Roberth batista da Silva
 //Eu queria dizer uma coisa: hakuna matata
