@@ -1,8 +1,8 @@
 const router = require('express').Router();
-const criar = require("../controles/criar");
-const apagar = require("../controles/apagar");
-const atualizar = require("../controles/atualizar");
-const listar = require("../controles/listar");
+const criar = require("../comandos/criar");
+const apagar = require("../comandos/apagar");
+const atualizar = require("../comandos/atualizar");
+const listar = require("../comandos/listar");
 
 router.get('/', listar.listarDespesa);
 router.post('/', criar.criarDespesa);
