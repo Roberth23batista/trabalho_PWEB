@@ -1,4 +1,4 @@
-const { Usuario, Despesa, Despesa } = require('../models');
+const { Usuario, Despesa, Agendamento } = require('../models');
 
 const listar = (Models, nome, include = []) => async (req, res) =>{
     try{
